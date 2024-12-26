@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { ChevronRight, ChevronLeft } from 'lucide-react'
 
 export default function Portfolio() {
   const [dateTime, setDateTime] = useState('')
@@ -29,11 +30,13 @@ export default function Portfolio() {
         {/* Header */}
         <header className="flex justify-between items-start mb-32">
           <div className="text-[#00ff95] tracking-wider">
-            CK <span className="inline-block">▶</span>
+            CK <ChevronRight className="inline-block w-4 h-4" />
           </div>
           <div className="text-right">
             <div className="text-[#00ff95] tracking-wider">{dateTime}</div>
-            <div className="text-[#00ff95] tracking-wider mt-1">◀ CHANNEL 00 ▶</div>
+            <div className="text-[#00ff95] tracking-wider mt-1">
+              <ChevronLeft className="inline-block w-4 h-4" /> CHANNEL 00 <ChevronRight className="inline-block w-4 h-4" />
+            </div>
           </div>
         </header>
 
